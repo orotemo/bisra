@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>בישרא</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+</head>
+<body class="<%= body_class %>" id="<%= @body_id || 'default' %>" dir="rtl" data-hook="body">
+	<div id="header-container">
+		<header class="wrapper clearfix">
+			<div id="logo" >
+				<%= image_tag 'logo.png' %>
+			</div>
+			<ul id="statistics">
+				<%= render :partial => 'spree/shared/nav_bar' %>
+			</ul>
+			<h1 id="title">בישרא</h1>
+			<nav>
+				<ul>
+					<%= render :partial => 'spree/shared/store_menu' %>
+				</ul>
+			</nav>
+		</header>
+	</div>
+	<div id="main-container">
+		<div id="main" class="wrapper clearfix">
+			<% if content_for? :intro %>
+				<section id="intro"><%= yield :intro %></section>
+			<% end %>
+			<% if content_for?(:sidebar) %>
+        <aside id="sidebar" class="columns alpha four" data-hook>
+          <%= yield :sidebar %>
+        </aside>
+      <% end %>
+      <%= breadcrumbs(@taxon) %>
+      <%= flash_messages %>
+			<%= yield %>
+		</div> <!-- #main -->
+	</div> <!-- #main-container -->
+
+	<div id="footer-container">
+		<footer class="wrapper">
+			<h3>TODO: occupy footer</h3>
+		</footer>
+	</div>
+	<%= render :partial => 'spree/shared/google_analytics' %>
+</body>
+</html>

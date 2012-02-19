@@ -1,0 +1,20 @@
+<% content_for :intro do -%>
+	<%= image_tag 'fillet.png' %>
+	<article>
+		<h2>מהמשק, אצלך בצלחת</h2>
+		<p>
+			העגלים שלנו מגודלים ממיטב הגרעינים אשר נבחרו בקפידה, על מנת להגביר את השיוש.
+			כל המאמצים נעשו על מנת להעצים את ההנאה מהסטייק המושלם, בכל שלב בדרך.
+		</p>
+	</article>
+<% end -%>
+<% content_for :sidebar do %>
+  <div data-hook="homepage_sidebar_navigation">
+    <%= render :partial => 'spree/shared/taxonomies' %>
+  </div>
+<% end %>
+
+<div data-hook="homepage_products">
+  <%= render :partial => 'spree/shared/products', :locals => { :products => @products } %>
+</div>
+

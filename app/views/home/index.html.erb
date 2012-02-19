@@ -1,0 +1,113 @@
+<% content_for :intro do -%>
+	<%= image_tag 'fillet.png' %>
+	<article>
+		<h2>מהמשק, אצלך בצלחת</h2>
+		<p>
+			העגלים שלנו מגודלים ממיטב הגרעינים אשר נבחרו בקפידה, על מנת להגביר את השיוש.
+			כל המאמצים נעשו על מנת להעצים את ההנאה מהסטייק המושלם, בכל שלב בדרך.
+		</p>
+	</article>
+<% end -%>
+
+<% content_for :sidebars do -%>
+	<section id="cart" class="opened">
+		<a href="#">סל בשר</a>
+		<span>7 מוצרים <small>(3000 ש"ח)</small></span>
+		<table>
+			<tr><th>כמות</th><th>מוצר</th><th>ש"ח</th></tr>
+			<tr><td class="numeric" >5</td><td>קילו אנטריקוט</td><td class="numeric" >900</td></tr>
+			<tr><td class="numeric" >5</td><td>קילו אנטריקוט</td><td class="numeric" >900</td></tr>
+		</table>
+	</section>
+	<section id="categories">
+		<article>
+			<img src="images/prod.jpg" />
+			<div >
+				<h2 >לורם איפסום</h2>
+				<p>
+					לורם איפסום דולור סיט אמט, קו קוויז דומור ליאמום בלינך רוגצה. לפמעט מוסן מנת. לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג 
+				</p>
+			</div>
+		</article>
+						<article>
+			<img src="images/prod.jpg" />
+			<div>
+				<h2>דולור סיט</h2>
+				<p>
+					לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית סחטיר בלובק. תצטנפל בלינדו למרקל אס לכימפו, דול, צוט ומעיוט - לפתיעם ברשג - ולתיעם גדדיש. 
+				</p>
+
+			</div>
+		</article>
+		<article>
+			<img src="images/prod.jpg" />
+			<div>
+				<h2 >קונסקטורר</h2>
+				<p>
+					ברשג - ולתיעם גדדיש. קוויז דומור ליאמום בלינך רוגצה. לפמעט מוסן מנת. לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג 
+				</p>
+			</div>
+		</article>
+	</section>	
+<% end -%>
+
+<section id="promoted" >
+	<ul class="products favorites">
+		<% for product in @hot_products -%>
+			<li>
+				<%= image_tag product.images[0].attachment.url %>
+				<span class="name"><%= product.name %></span>
+				<span class="price"><%= product.price %> ש"ח</span>
+				<span class="buy"> <a class="plus" href="#" >+</a><a class="minus" href="#" >-</a></span>
+			</li>
+		<% end -%>
+		<li>
+			<img src="images/prod.jpg" />
+			<span class="name">נתחים ביישון יבש</span>
+			<span class="price">200 ש"ח</span>
+			<span class="buy"> <a class="plus" href="#" >+</a><a class="minus" href="#" >-</a></span>
+		</li>
+		<li>
+			<img src="images/prod.jpg" />
+			<span class="name">נתחים ביישון יבש</span>
+			<span class="price">200 ש"ח</span>
+			<span class="buy"> <a class="plus" href="#" >+</a><a class="minus" href="#" >-</a></span>
+		</li>
+		<li>
+			<img src="images/prod.jpg" />
+			<span class="name">נתחים ביישון יבש</span>
+			<span class="price">200 ש"ח</span>
+			<span class="buy"> <a class="plus" href="#" >+</a><a class="minus" href="#" >-</a></span>
+		</li>
+		<li>
+			<img src="images/prod.jpg" />
+			<span class="name">נתחים ביישון יבש</span>
+			<span class="price">200 ש"ח</span>
+			<span class="buy"> <a class="plus" href="#" >+</a><a class="minus" href="#" >-</a></span>
+		</li>
+		<li>
+			<img src="images/prod.jpg" />
+			<span class="name">נתחים ביישון יבש</span>
+			<span class="price">200 ש"ח</span>
+			<span class="buy"> <a class="plus" href="#" >+</a><a class="minus" href="#" >-</a></span>
+		</li>
+		<li>
+			<img src="images/prod.jpg" />
+			<span class="name">נתחים ביישון יבש</span>
+			<span class="price">200 ש"ח</span>
+			<span class="buy"> <a class="plus" href="#" >+</a><a class="minus" href="#" >-</a></span>
+		</li>
+		<li>
+			<img src="images/prod.jpg" />
+			<span class="name">נתחים ביישון יבש</span>
+			<span class="price">200 ש"ח</span>
+			<span class="buy"> <a class="plus" href="#" >+</a><a class="minus" href="#" >-</a></span>
+		</li>
+		<li>
+			<img src="images/prod.jpg" />
+			<span class="name">נתחים ביישון יבש</span>
+			<span class="price">200 ש"ח</span>
+			<span class="buy"> <a class="plus" href="#" >+</a><a class="minus" href="#" >-</a></span>
+		</li>
+	</ul>
+</section>
