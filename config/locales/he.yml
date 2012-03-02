@@ -173,8 +173,8 @@ he:
         one: #Payment
         other: #Payments
       spree/product: 
-        one: מוצר
-        other: מוצרים
+        one: #מוצר
+        other: #מוצרים
       spree/product_group: 
         one: #"Product group"
         other: #"Product groups"
@@ -247,7 +247,7 @@ he:
         delivery_error: #'Testmail delivery error'
         delivery_success: #'Testmail sent successfully'
         error: #'Testmail error: %{e}'
-  administration: #Administration
+  administration: ניהול
   advertise: #Advertise
   all: #"All"
   all_departments: #All departments

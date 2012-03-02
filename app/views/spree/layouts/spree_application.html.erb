@@ -27,8 +27,16 @@
 	</div>
 	<div id="main-container">
 		<div id="main" class="wrapper clearfix">
-			<% if content_for? :intro %>
-				<section id="intro"><%= yield :intro %></section>
+			<% if request.env['PATH_INFO'] == "/" %>
+				<section id="intro">	<%= image_tag 'fillet.png' %>
+					<article>
+						<h2>מהמשק, אצלך בצלחת</h2>
+						<p>
+							העגלים שלנו מגודלים ממיטב הגרעינים אשר נבחרו בקפידה, על מנת להגביר את השיוש.
+							כל המאמצים נעשו על מנת להעצים את ההנאה מהסטייק המושלם, בכל שלב בדרך.
+						</p>
+					</article>
+				</section>
 			<% end %>
 			<% if content_for?(:sidebar) %>
         <aside id="sidebar" class="columns alpha four" data-hook>
